@@ -10,6 +10,10 @@ import (
 
 var tracer trace.Tracer
 
+func CreateSpanWithTraceId(ctx context.Context, traceId, spanId string) context.Context {
+
+}
+
 // AddToCurrentSpan OpenTelemetry instructions https://opentelemetry.io/docs/instrumentation/go/manual/
 func AddToCurrentSpan(ctx context.Context, kv ...attribute.KeyValue) {
 	span := trace.SpanFromContext(ctx)
